@@ -42,6 +42,39 @@ $helper = new PhpcsfixerHelper();
 $rules = $helper->get_style_rules();
 ```
 
+## Fixer File
+If you don't have a fixer file, you can use the template below:
+```php
+<?php
+
+use PhpCsFixer\Finder;
+use Shawnveltman\PhpcsfixerHelper\PhpcsfixerHelper;
+
+$helper = new PhpcsfixerHelper();
+$rules = $helper->get_style_rules();
+
+$finder = Finder::create()
+    ->notPath('bootstrap')
+    ->notPath('storage')
+    ->notPath('vendor')
+    ->notPath('coverage-report')
+    ->in(getcwd())
+    ->name('*.php')
+    ->notName('*.blade.php')
+    ->notName('index.php')
+    ->notName('server.php')
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true);
+
+$config = new PhpCsFixer\Config();
+
+return $config->setFinder($finder)
+    ->setRules($rules)
+    ->setRiskyAllowed(true)
+    ->setUsingCache(true);
+ 
+```
+
 ### Testing
 
 ```bash
