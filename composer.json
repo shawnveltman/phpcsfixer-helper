@@ -1,54 +1,53 @@
 {
-    "name": "shawnveltman/phpcsfixer-helper",
-    "description": "Collection of my PHP CS Fixer rules to make it easy to share between projects",
-    "keywords": [
-        "shawnveltman",
-        "phpcsfixer-helper"
-    ],
-    "homepage": "https://github.com/shawnveltman/phpcsfixer-helper",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Shawn Veltman",
-            "email": "shawn.veltman@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Shawnveltman\\PhpcsfixerHelper\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Shawnveltman\\PhpcsfixerHelper\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Shawnveltman\\PhpcsfixerHelper\\PhpcsfixerHelperServiceProvider"
-            ],
-            "aliases": {
-                "PhpcsfixerHelper": "Shawnveltman\\PhpcsfixerHelper\\PhpcsfixerHelperFacade"
-            }
-        }
+  "name": "shawnveltman/phpcsfixer-helper",
+  "description": "Collection of my PHP CS Fixer rules to make it easy to share between projects",
+  "keywords": [
+    "shawnveltman",
+    "phpcsfixer-helper"
+  ],
+  "homepage": "https://github.com/shawnveltman/phpcsfixer-helper",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Shawn Veltman",
+      "email": "shawn.veltman@gmail.com",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "illuminate/support": "^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Shawnveltman\\PhpcsfixerHelper\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Shawnveltman\\PhpcsfixerHelper\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shawnveltman\\PhpcsfixerHelper\\PhpcsfixerHelperServiceProvider"
+      ],
+      "aliases": {
+        "PhpcsfixerHelper": "Shawnveltman\\PhpcsfixerHelper\\PhpcsfixerHelperFacade"
+      }
+    }
+  }
 }

@@ -1,12 +1,9 @@
 <?php
 
-namespace Shawnveltman\PhpcsfixerHelper;
+namespace Shawnveltman\PhpcsfixerHelper\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Shawnveltman\PhpcsfixerHelper\Skeleton\SkeletonClass
- */
 class PhpcsfixerHelperFacade extends Facade
 {
     /**
