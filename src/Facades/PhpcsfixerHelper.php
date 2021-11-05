@@ -4,7 +4,7 @@ namespace Shawnveltman\PhpcsfixerHelper\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class PhpcsfixerHelperFacade extends Facade
+class PhpcsfixerHelper extends Facade
 {
     /**
      * Get the registered name of the component.
