@@ -6,6 +6,23 @@
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
+## Prerequisites
+If you don't already have PhpCsFixer and Husky installed, then copy & paste below into terminal:
+```php
+composer require friendsofphp/php-cs-fixer --dev
+npm i -D husky lint-staged
+npx husky install
+npm set-script prepare "husky install"
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+Then, add this line to package.json (this assumes your Php CS Fixer file is called .php-cs-fixer.php, change as needed):
+```php 
+"lint-staged": {
+        "*.php": "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php"
+    }
+```
+
 ## Installation
 
 You can install the package via composer:
@@ -24,8 +41,6 @@ use Shawnveltman\PhpcsfixerHelper\PhpcsfixerHelper;
 $helper = new PhpcsfixerHelper();
 $rules = $helper->get_style_rules();
 ```
-
-
 
 ### Testing
 
