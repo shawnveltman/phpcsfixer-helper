@@ -31,6 +31,9 @@ You can install the package via composer:
 composer require shawnveltman/phpcsfixer-helper --dev
 ```
 
+## Update .gitignore
+Add .php-cs-fixer-cache.php to your .gitignore file!
+
 ## Usage
 
 After installing the package, navigate to your PHP CS Fixer file (ie .php-cs-fixer.php), and replace the existing $rules array with:
