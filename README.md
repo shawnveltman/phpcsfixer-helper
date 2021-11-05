@@ -16,9 +16,16 @@ composer require shawnveltman/phpcsfixer-helper --dev
 
 ## Usage
 
+After installing the package, navigate to your PHP CS Fixer file (ie .php-cs-fixer.php), and replace the existing $rules array with:
+
 ```php
-// Usage description here
+use Shawnveltman\PhpcsfixerHelper\PhpcsfixerHelper;
+
+$helper = new PhpcsfixerHelper();
+$rules = $helper->get_style_rules();
 ```
+
+
 
 ### Testing
 
