@@ -32,7 +32,7 @@ composer require shawnveltman/phpcsfixer-helper --dev
 ```
 
 ## Update .gitignore
-Add .php-cs-fixer-cache.php to your .gitignore file!
+Add .php-cs-fixer.cache to your .gitignore file!
 
 ## Usage
 
