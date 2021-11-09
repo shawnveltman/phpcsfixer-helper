@@ -231,7 +231,7 @@ class PhpcsfixerHelper
             'php_unit_dedicate_assert'                         => true,
             'php_unit_dedicate_assert_internal_type'           => true,
             'php_unit_expectation'                             => true,
-            'php_unit_method_casing'                           => ['case' => 'snake'],
+            'php_unit_method_casing'                           => ['case' => 'snake_case'],
             'php_unit_mock'                                    => true,
             'php_unit_mock_short_will_return'                  => true,
             'php_unit_no_expectation_annotation'               => true,
