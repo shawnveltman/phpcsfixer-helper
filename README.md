@@ -4,19 +4,22 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/shawnveltman/phpcsfixer-helper.svg?style=flat-square)](https://packagist.org/packages/shawnveltman/phpcsfixer-helper)
 ![GitHub Actions](https://github.com/shawnveltman/phpcsfixer-helper/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
+PSRs you support to avoid any confusion with users and contributors.
 
 ## Prerequisites
+
 If you don't already have PhpCsFixer and Husky installed, then copy & paste below into terminal:
+
 ```php
 composer require friendsofphp/php-cs-fixer --dev
 npm i -D husky lint-staged
 npx husky install
-npm set-script prepare "husky install"
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
 Then, add this line to package.json (this assumes your Php CS Fixer file is called .php-cs-fixer.php, change as needed):
+
 ```php 
 "lint-staged": {
         "*.php": "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php"
@@ -31,12 +34,16 @@ You can install the package via composer:
 composer require shawnveltman/phpcsfixer-helper --dev
 ```
 
+Once you've installed it, create a new file called .php-cs-fixer.php in your base directory.
+
 ## Update .gitignore
+
 Add .php-cs-fixer.cache to your .gitignore file!
 
 ## Usage
 
-After installing the package, navigate to your PHP CS Fixer file (ie .php-cs-fixer.php), and replace the existing $rules array with:
+After installing the package, navigate to your PHP CS Fixer file (ie .php-cs-fixer.php), and replace the existing $rules
+array with:
 
 ```php
 use Shawnveltman\PhpcsfixerHelper\PhpcsfixerHelper;
@@ -46,7 +53,9 @@ $rules = $helper->get_style_rules();
 ```
 
 ## Fixer File
-If you don't have a fixer file, you can use the template below:
+
+If you don't have a fixer file, you can use the template below to your .php-cs-fixer.php file:
+
 ```php
 <?php
 
@@ -84,6 +93,13 @@ return $config->setFinder($finder)
 composer test
 ```
 
+## Common Issues / Troubleshooting
+If you run the above steps and it is not automatically running on commit, there may be different npm versions at play in your team.
+
+Step 1 is to delete your node_modules directory, and package-lock.json files, and then run npm install.
+
+Step 2 is to ensure all team members are using the same version of npm.
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -98,8 +114,8 @@ If you discover any security related issues, please email shawn.veltman@gmail.co
 
 ## Credits
 
--   [Shawn Veltman](https://github.com/shawnveltman)
--   [All Contributors](../../contributors)
+- [Shawn Veltman](https://github.com/shawnveltman)
+- [All Contributors](../../contributors)
 
 ## License
 
