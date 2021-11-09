@@ -204,7 +204,7 @@ class PhpcsfixerHelper
             'switch_continue_to_break'                         => true,
             'ternary_operator_spaces'                          => true,
             'ternary_to_null_coalescing'                       => true,
-            'trailing_comma_in_multiline'                      => ['elements' => ['arrays', 'arguments', 'parameters']],
+            'trailing_comma_in_multiline'                      => ['elements' => ['arrays']],
             'trim_array_spaces'                                => true,
             'array_indentation'                                => true,
             'unary_operator_spaces'                            => true,
