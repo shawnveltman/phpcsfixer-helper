@@ -13,7 +13,7 @@ If you don't already have PhpCsFixer and Husky installed, then copy & paste belo
 
 ```php
 composer require friendsofphp/php-cs-fixer --dev
-npm i -D husky lint-staged
+npm i -D husky lint-staged@^11.x.x
 npx husky install
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
