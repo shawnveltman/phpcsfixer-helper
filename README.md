@@ -4,8 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/shawnveltman/phpcsfixer-helper.svg?style=flat-square)](https://packagist.org/packages/shawnveltman/phpcsfixer-helper)
 ![GitHub Actions](https://github.com/shawnveltman/phpcsfixer-helper/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This allows our team to share the same code styling, to reduce the amount of time we need to discuss those things, as well as sorting through changes between commits that are only formating related.
 
 ## Prerequisites
 
@@ -14,6 +13,7 @@ If you don't already have PhpCsFixer and Husky installed, then copy & paste belo
 ```php
 composer require friendsofphp/php-cs-fixer --dev
 npm i -D husky lint-staged@^11.x.x
+npm install --save-dev @shufo/prettier-plugin-blade prettier
 npx husky install
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
@@ -22,8 +22,9 @@ Then, add this line to package.json (this assumes your Php CS Fixer file is call
 
 ```php 
 "lint-staged": {
-        "*.php": "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php"
-    }
+    "*.php": "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php",
+    "*.blade.php": "node_modules/.bin/prettier --write resources/**/*.blade.php"
+  },
 ```
 
 ## Installation
