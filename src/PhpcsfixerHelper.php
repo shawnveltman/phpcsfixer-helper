@@ -133,7 +133,7 @@ class PhpcsfixerHelper
             'no_unneeded_curly_braces'                         => true,
             'control_structure_continuation_position'          => ['position' => 'same_line'],
             'no_unset_cast'                                    => true,
-            'no_unset_on_property'                             => true,
+            'no_unset_on_property'                             => false,
             'no_unreachable_default_argument_value'            => true,
             'no_useless_return'                                => true,
             'no_useless_else'                                  => true,
