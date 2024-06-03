@@ -14,8 +14,12 @@ If you don't already have PhpCsFixer and Husky installed, then copy & paste belo
 composer require friendsofphp/php-cs-fixer --dev
 npm i -D husky lint-staged@^11.x.x
 npm install --save-dev @shufo/prettier-plugin-blade prettier
-npx husky install
-npx husky add .husky/pre-commit "npx lint-staged"
+npx husky init
+```
+
+Then, update the .husky/pre-commit file to only have this line:
+```
+npx lint-staged
 ```
 
 Then, add this line to package.json (this assumes your Php CS Fixer file is called .php-cs-fixer.php, change as needed):
